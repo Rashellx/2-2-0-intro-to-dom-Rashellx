@@ -1,50 +1,75 @@
+// Question 1
 const getMainHeadingText = () => {
-  //document.querySelector("#main-heading")
-  console.log(document.querySelector("#main-heading").textContent)
+  const mainHeading = document.querySelector('h1#main-heading');
+  // console.log(mainHeading.textContent);
+  console.log(document.querySelector('h1#main-heading').textContent); // or you can do this
 };
 
+
+// Question 2
 const getAllMainText = () => {
-  const main = document.querySelectorAll(".main-text")
-  let newText = ""
-  main.forEach((main) => newText += main.textContent + ",")
-  console.log(newText.slice(0, -1))
+  let mainText = document.querySelectorAll('.main-text');
+  let newText = "";
+
+  mainText.forEach((mainText) =>
+    newText += mainText.textContent + ",");
+  console.log(newText.slice(0, -1)); // Removing the last comma
 };
 
+
+// Question 3
 const setSubtitleText = () => {
-  document.querySelector("h2").textContent = "This is a subtitle!"
+  document.querySelector('h2#subtitle').textContent = 'This is a subtitle!';
 };
 
+
+// Question 4
 const modifyDivClassList = () => {
-  const list = document.querySelector("#modify-classes").classList
-  list.remove("bad-class")
-  list.add("new-class")
+  const newList = document.querySelector("#modify-classes").classList
+  newList.remove("bad-class")
+  newList.add("new-class");
 };
-//Question 5
+
+
+// Question 5
 const addH2 = () => {
-  const newElement = document.createElement("h2")
-  newElement.id = "h2-test"
-  newElement.textContent = "Another one!"
-  document.body.appendChild(newElement)
-}
+  const newH2 = document.createElement("h2")
+  newH2.id = 'h2-test';
+  newH2.textContent = 'Another one!';
+  document.body.appendChild(newH2)
 
+};
+
+
+// Question 6
 const removeOldInfo = () => {
-  let element = document.querySelector("#old-info")
-  element.remove()
+  const removeP = document.getElementById("old-info");
+  removeP.remove();
 };
 
-const makeAlphabet = () => {
-  const numOfLetters = document.querySelector("#alphabet").dataset.numLetters
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const letters = alphabet.split(" ")
-  for (let i = 0; i < numOfLetters; i++) {
-    const newlist = document.createElement("li")
-    newlist.textContent = ` ${letters[i]} is letter #${i + 1} in the alphabet`
-    hi
+// Question 7
+const makeAlphabet = () => {                           //attribute
+  const grabId = document.querySelector("#alphabet").dataset.numLetters // read the ordered list
+  const alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  for (let i = 0; i < grabId; i++) {
+    const list = document.createElement("li") // unordered list --> listed items
+    list.textContent = `${alph[i]} is letter #${i + 1} in the alphabet`
+    document.querySelector("#alphabet").append(list)
   }
-
 };
 
+/// Question 8 
 const makeBio = () => {
+  document.querySelector("#my-bio").innerHTML = `
+  <h2 id="bio-heading">About Me</h2>
+  <p>My name is Zo and I like learn cool new things</p>
+  <h3 id="hobby-heading">My Hobbies</h3>
+  <ul>
+    <li>Running</li>
+    <li>Reading</li>
+    <li>Writing</li>
+  </ul>`
 };
 
 // "runner" function

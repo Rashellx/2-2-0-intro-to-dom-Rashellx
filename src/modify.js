@@ -19,7 +19,7 @@ const getAllMainText = () => {
 
 // Question 3
 const setSubtitleText = () => {
-  document.querySelector('h2#subtitle').textContent = 'This is a subtitle!';
+  document.querySelector('#subtitle').textContent = 'This is a subtitle!';
 };
 
 
@@ -62,14 +62,14 @@ const makeAlphabet = () => {                          
 /// Question 8 
 const makeBio = () => {
   document.querySelector("#my-bio").innerHTML = `
-  <h2 id="bio-heading">About Me</h2>
-  <p>My name is Zo and I like learn cool new things</p>
-  <h3 id="hobby-heading">My Hobbies</h3>
-  <ul>
-    <li>Running</li>
-    <li>Reading</li>
-    <li>Writing</li>
-  </ul>`
+<h2 id="bio-heading">About Me</h2>
+<p>My name is Zo and I like learn cool new things</p>
+<h3 id="hobby-heading">My Hobbies</h3>
+<ul>
+<li>Running</li>
+<li>Reading</li>
+<li>Writing</li>
+</ul>`
 };
 
 // "runner" function
